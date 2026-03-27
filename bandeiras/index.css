@@ -1,0 +1,48 @@
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+    background-color: rgb(44, 40, 40);
+}
+
+
+.bandeira-horizontal div{
+    width: 15vw;
+    height: 4vh;
+}
+
+.bandeira-vertical {
+    display: flex;
+    flex-direction: row;
+}
+.bandeira-vertical div{
+    width: 5vw;
+    height: 12vh;
+    display: grid;
+}
+
+.cor_vermelha {
+    background-color: rgb(136, 6, 6);
+}
+
+.cor_branca {
+    background-color: rgb(255, 255, 255);
+}
+
+.cor_azul {
+    background-color: rgb(8, 55, 141);
+}
+
+.cor_preta {
+    background-color: rgb(0, 0, 0);
+}
+
+.cor_amarela {
+    background-color: rgb(189, 155, 6);
+}
+
+.cor_verde {
+    background-color: rgb(16, 116, 16);
+}

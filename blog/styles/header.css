@@ -1,0 +1,12 @@
+h1{
+    color: red;
+    text-align: center;
+    background-color: rgb(255, 255, 255) ;
+}
+#Hugo{ 
+   border-radius: 40;
+}
+.p-cabecalho{
+    text-align: center;
+    color: blue;
+}
