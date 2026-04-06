@@ -1,9 +1,8 @@
-.news-card:hover img {
+.news-card:hover img{
 transform: scale(1.05);
 transition: 0.3s;
 }
-
-.line-clamp-2 {
+.line-clamp-2{
 display: -webkit-box;
 line-clamp: 2;
 -webkit-box-orient: vertical;  
