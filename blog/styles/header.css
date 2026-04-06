@@ -1,12 +1,11 @@
-h1{
-    color: red;
-    text-align: center;
-    background-color: rgb(255, 255, 255) ;
+.news-card:hover img {
+transform: scale(1.05);
+transition: 0.3s;
 }
-#Hugo{ 
-   border-radius: 40;
-}
-.p-cabecalho{
-    text-align: center;
-    color: blue;
+
+.line-clamp-2 {
+display: -webkit-box;
+line-clamp: 2;
+-webkit-box-orient: vertical;  
+overflow: hidden;
 }
