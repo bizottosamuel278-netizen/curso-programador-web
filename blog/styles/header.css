@@ -1,4 +1,16 @@
 .news-card:hover img{
+transform: scale(6.05);
+transition: 0.3s;
+}
+.line-clamp-2{
+display: -webkit-box;
+line-clamp: 2;
+-webkit-box-orient: vertical;  
+overflow: hidden;
+}
+
+@media (max-width : 450px) {
+.news-card:hover img{
 transform: scale(1.05);
 transition: 0.3s;
 }
@@ -8,3 +20,42 @@ line-clamp: 2;
 -webkit-box-orient: vertical;  
 overflow: hidden;
 }
+
+.overflow-hidden{
+width: 100vh;
+height:110vh;
+
+}
+
+.absolute{
+width: 100vh;
+height:110vh;
+}
+
+.card-titulo {
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #222;
+  padding: 10px 15px;
+}
+
+.card-metadata {
+  font-size: 0.75rem;
+  color: #888;
+  padding: 0 15px 15px 15px;
+  text-transform: uppercase;
+}
+
+.hero-image-container {
+  position: relative;
+  background: linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.8));
+}
+
+.card:active {
+  transform: scale(0.98);
+  transition: transform 0.1s ease;
+}
+
+}
+
