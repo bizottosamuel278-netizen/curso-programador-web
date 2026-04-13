@@ -58,4 +58,57 @@ height:110vh;
 }
 
 }
+.cop30:hover {
+  transform: scale(1.5);
+  rotate: 360deg;
+}
+.cop30 {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    z-index: 1; }
 
+.cop30 {
+    transform: scale(1.08); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); 
+    z-index: 10; 
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  border-bottom: 1px solid #e0e0e0;
+  font-family: sans-serif;
+}
+
+.logo {
+  font-weight: 900;
+  font-size: 24px;
+  letter-spacing: -1px;
+}
+.red { color: #d32f2f; }
+.blue { color: #1a237e; }
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #1a237e;
+  font-weight: bold;
+  font-size: 14px;
+  display: inline-block; 
+  
+  transition: transform 0.3s ease; 
+}
+
+
+.nav-links a:hover {
+  transform: scale(1.2); 
+  color: #d32f2f;     
+}
