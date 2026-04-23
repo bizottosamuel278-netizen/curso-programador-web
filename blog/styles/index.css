@@ -1,0 +1,29 @@
+    
+    .news-card {
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+    .news-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+    }
+
+    .news-card .img-wrapper {
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .news-card .img-wrapper img {
+      transition: transform 0.35s ease;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .news-card:hover .img-wrapper img {
+      transform: scale(1.07);
+    }
+
+    .news-card:hover .card-title {
+      color: #1a6ed8;
+    }
+    .card-title {
+      transition: color 0.3s ease;
+    }

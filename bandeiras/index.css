@@ -339,7 +339,7 @@ body {
 :root {
   --flag-width: 400px;
   --flag-height: 250px;
-  --speed: 1.2s; /* Velocidade do vento */
+  --speed: 1.2s; 
 }
 
 .flag-container {
@@ -347,16 +347,14 @@ body {
   width: var(--flag-width);
   height: var(--flag-height);
   margin: 50px auto;
-  perspective: 1000px; /* Dá profundidade ao movimento */
+  perspective: 1000px; 
 }
 
 .slice {
   flex: 1;
   height: 100%;
-  background-color: #666; /* Cor neutra conforme solicitado */
-  border-top: 1px solid rgba(255,255,255,0.05); /* Sutil definição de borda */
-  
-  /* A mágica acontece aqui: */
+  background-color: #9e1616; 
+  border-top: 1px solid rgba(255,255,255,0.05); 
   animation: wave var(--speed) ease-in-out infinite alternate;
 }
 
@@ -369,7 +367,6 @@ body {
   }
 }
 
-/* Aplicando o atraso progressivo em cada fatia para criar a onda */
 .slice:nth-child(1)  { animation-delay: -0.1s; }
 .slice:nth-child(2)  { animation-delay: -0.2s; }
 .slice:nth-child(3)  { animation-delay: -0.3s; }
