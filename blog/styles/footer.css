@@ -1,53 +1,104 @@
+/* =============================================
+   FOOTER.CSS — Rodapé, mídias sociais, responsivo
+   ============================================= */
+
 footer {
-    background: #0f172a;
+    background: var(--dark);
     color: #9ca3af;
-    padding: 40px 0;
-    margin-top: 50px;
+    padding: 56px 0 32px;
+    margin-top: 0;
     text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
+/* faixa decorativa topo */
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 3px;
+    background: linear-gradient(90deg, var(--red), #f97316, #facc15, var(--red));
+    background-size: 300% 100%;
+    animation: barSlide 4s linear infinite;
+}
+
+/* ruído sutil de fundo */
+footer::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    opacity: .4;
+}
+
+footer .container { position: relative; z-index: 1; }
+
 footer h2 {
-    color: #ef4444;
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--red);
+    letter-spacing: -0.5px;
     margin-bottom: 10px;
 }
 
-footer p {
-    font-size: 14px;
-    margin-bottom: 20px;
+footer > .container > p {
+    font-size: 13px;
+    color: #9ca3af;
+    margin-bottom: 32px;
+    max-width: 460px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
 }
 
-footer .links {
+/* Links sociais */
+.footer-socials {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 18px;
+    margin-bottom: 32px;
+}
+.footer-socials i {
+    font-size: 20px;
+    color: #6b7280;
+    cursor: pointer;
+    transition: color 0.25s, transform 0.22s;
+    display: inline-block;
+}
+.footer-socials i:hover            { transform: translateY(-4px) scale(1.18); }
+.footer-socials .fa-instagram:hover { color: #e1306c; }
+.footer-socials .fa-facebook:hover  { color: #1877f2; }
+.footer-socials .fa-reddit:hover    { color: #ff4500; }
+.footer-socials .fa-threads:hover   { color: #e5e7eb; }
+.footer-socials .fa-whatsapp:hover  { color: #25d366; }
+
+/* Links legais */
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px 24px;
     font-size: 12px;
+    color: #6b7280;
+    border-top: 1px solid #1e293b;
+    padding-top: 22px;
 }
-
-footer a {
+.footer-links a {
     color: #9ca3af;
-    text-decoration: none;
+    transition: color 0.25s;
 }
+.footer-links a:hover { color: var(--white); }
+.footer-links p { color: #6b7280; font-size: 12px; }
 
-footer a:hover {
-    color: white;
-}
-
+/* ===== RESPONSIVO GLOBAL ===== */
 @media (max-width: 900px) {
-    .grid-4 {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    nav {
-        display: none;
-    }
+    nav.nav-links { display: none; }
 }
-
 @media (max-width: 600px) {
-    .grid-4, .grid-3 {
-        grid-template-columns: 1fr;
-    }
-
-    .destaque h2 {
-        font-size: 24px;
-    }
+    .destaque h2 { font-size: 24px; }
+    .destaque { height: auto; min-height: 360px; }
+    footer h2 { font-size: 22px; }
 }

@@ -1,0 +1,87 @@
+/* =============================================
+   MAIN.CSS — Animações globais e layout do main
+   ============================================= */
+
+main { min-height: 60vh; }
+
+/* ===== Animações de entrada ===== */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-24px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes zoomIn {
+    from { opacity: 0; transform: scale(.94); }
+    to   { opacity: 1; transform: scale(1); }
+}
+
+/* Destaque hero */
+.destaque { animation: zoomIn 0.8s ease both; }
+
+/* Headings de seção */
+.section-heading { animation: fadeInLeft 0.6s ease both; }
+
+/* Cards — escalonamento por posição */
+.news-card:nth-child(1) { animation: fadeInUp .55s .10s ease both; }
+.news-card:nth-child(2) { animation: fadeInUp .55s .20s ease both; }
+.news-card:nth-child(3) { animation: fadeInUp .55s .30s ease both; }
+.news-card:nth-child(4) { animation: fadeInUp .55s .40s ease both; }
+.news-card:nth-child(5) { animation: fadeInUp .55s .50s ease both; }
+.news-card:nth-child(6) { animation: fadeInUp .55s .55s ease both; }
+
+a.news-card-h:nth-child(1) { animation: fadeInUp .6s .10s ease both; }
+a.news-card-h:nth-child(2) { animation: fadeInUp .6s .25s ease both; }
+
+/* ===== Spinner de carregamento (caso JS use) ===== */
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+.spinner {
+    width: 32px; height: 32px;
+    border: 3px solid var(--gray-200);
+    border-top-color: var(--red);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin: 40px auto;
+}
+
+/* ===== Hover glow vermelho em cards Brasil ===== */
+#nacional .news-card:hover {
+    box-shadow: 0 8px 28px rgba(239,68,68,.13);
+}
+
+/* ===== Hover glow amarelo em cards Esporte ===== */
+#esporte .news-card:hover {
+    box-shadow: 0 8px 28px rgba(250,204,21,.18);
+    transform: translateY(-5px);
+}
+
+/* ===== Scroll reveal — aplicado via JS ===== */
+.reveal {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity .65s ease, transform .65s ease;
+}
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* atrasos escalonados para grupos */
+.reveal-delay-1 { transition-delay: .05s; }
+.reveal-delay-2 { transition-delay: .15s; }
+.reveal-delay-3 { transition-delay: .25s; }
+.reveal-delay-4 { transition-delay: .35s; }
+
+/* ===== Separador entre seções ===== */
+.section-divider {
+    border: none;
+    border-top: 1px solid var(--gray-200);
+    margin: 40px 0 0;
+}
+
+/* ===== Espaçamento de seções ===== */
+.sec-wrap { padding: 52px 0 20px; }

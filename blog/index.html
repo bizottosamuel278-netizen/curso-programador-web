@@ -2,171 +2,583 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta nome="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal de Notícias | Global & Nacional</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles/body.css"></link>
-    <link rel="stylesheet" href="styles/footer.css"></link>                                    
-    <link src="styles/header.css"></link>
-    <link rel="stylesheet" href="styles/index.css"></link>
-    <link rel="stylesheet" href="styles/main.css"></link>
-    <link rel="stylesheet" href="styles/section.css"></link>
- </head>
-<body class="bg-gray-50 text-gray-900">
-    <header class="bg-white border-b sticky top-0 z-50">
-        <div class="container header-content"></div>
-         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <h1 class="text-3xl font-black tracking-tighter text-red-600">INFO<span class="text-slate-800">MUNDO</span></h1>
-            <nav class="hidden md:flex space-x-8 font-semibold text-sm uppercase">
-            <nav class="nav-links"></nav>
-                <a href="#nacional" class="hover:text-red-600">Nacional</a>
-                <a href="#internacional" class="hover:text-red-600">Internacional</a>
-                <a href="#economia" class="hover:text-red-600">Economia</a>
-                <a href="#tecnologia" class="hover:text-red-600">Tecnologia</a>
-            </nav>
-            <div class="flex items-center space-x-4">
-                <button class="bg-gray-100 p-2 rounded-full hover:bg-gray-200">🔍</button>
-                <input class="styled" type="button" value="buscar"/>
-            </div>
-        </div>
-    </header>
-    <section class="container">
-        <div class="destaque">
-            <img src="https://agenciacenarium.com.br/wp-content/uploads/2025/11/54907854708-b49baca9ce-k.jpg" alt="Destaque" class="absolute inset-0 w-full h-full object-cover opacity-50">
-            <div class="relative p-8 md:p-12 w-full md:w-2/3">
-                <span class="bg-red-600 text-white px-3 py-1 text-xs font-bold rounded mb-4 inline-block">MUNDO</span>
-                <h2 class="text-3xl md:text-5xl font-bold text-white mb-4 leading-tight">Crise climática: Líderes mundiais se reúnem para novo acordo histórico</h2>
-                <p class="text-gray-200 text-lg mb-6">A cúpula internacional busca reduzir em 40% a emissão de poluentes até 2030.</p>
-                <a href="#" class="bg-white text-slate-900 px-6 py-3 rounded-lg font-bold hover:bg-red-600 hover:text-white transition">Ler matéria completa</a>
-            </div>
-        </div>
-    </section>
-    <section id="nacional" class="container mx-auto px-4 mt-16">
-        <div class="flex items-center mb-8">
-            <h2 class="text-2xl font-bold border-l-4 border-red-600 pl-4 uppercase tracking-wider">Brasil</h2>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="bg-white rounded-lg overflow-hidden shadow-sm news-card border border-gray-100">
-                <div class="overflow-hidden">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5xwNsV12NOm5fRfR1nGBA-JpIAC9MHqHIuw&" class="w-full h-40 object-cover">
-                </div>
-                <div class="p-4">
-                    <h3 class=>PIB brasileiro cresce acima do esperado no último trimestre</h3>
-                    <p class="text-sm font-bold border-l-4 text-gray-500 mt-2 italic">Economia • 2h atrás</p>
-                </div>
-            </div>
-            <div class="bg-white rounded-lg overflow-hidden shadow-sm news-card border border-gray-100">
-                <div class="overflow-hidden">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBdHLc05xCnl5kYrFiYX6Z7txOiaQLMxraFg&s" class="w-full h-40 object-cover">
-                </div>
-                <div class="p-4">
-                    <h3 class=>Novas vacinas chegam aos postos de saúde de todo o país</h3>
-                    <p class="text-sm font-bold border-l-4 text-gray-500 mt-2 italic">Saúde • 4h atrás</p>
-                </div>
-            </div>
-            <div class="bg-white rounded-lg overflow-hidden shadow-sm news-card border border-gray-100 md:hidden lg:block">
-                <div class="overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=400" class="w-full h-40 object-cover">
-                </div>
-                <div class="p-4">
-                    <h3 class=>Setor imobiliário vê alta histórica em grandes capitais</h3>
-                    <p class="text-sm font-bold border-l-4 text-gray-500 mt-2 italic">Negócios • 5h atrás</p>
-                </div>
-            </div>
-            <div class="bg-white rounded-lg overflow-hidden shadow-sm news-card border border-gray-100">
-                <div class="overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=400" class="w-full h-40 object-cover">
-                </div>
-                <div class="p-4">
-                    <h3 class=>Festival de cinema atrai milhares de turistas em Gramado</h3>
-                    <p class="text-sm font-bold border-l-4 text-gray-500 mt-2 italic cursor-pointer">Cultura • 6h atrás</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="internacional" class="bg-slate-100 ">
-        <div class="container mx-auto px-4">
-            <div class="flex items-center mb-8">
-                <h2 class="text-2xl font-bold border-l-4 border-blue-600 pl-4 uppercase tracking-wider">Internacional</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <div class="col-span-1 md:col-span-2 space-y-6">
-                    <a href="#" class="news-card flex flex-col md:flex-row bg-white rounded-xl overflow-hidden shadow-sm">
-        <div class="img-wrapper w-full md:w-60 h-48">
-          <img
-            src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=300"
-            alt="Dólar Americano"
-          />
-        </div>
-        <div class="p-6">
-          <h4 class="card-title text-xl font-bold mb-2 text-gray-900 cursor-pointer">
-            Moeda digital europeia entra em fase final de testes
-          </h4>
-          <p class="text-gray-600 text-sm mb-4">
-            O Banco Central Europeu confirmou que a nova infraestrutura está pronta para operar em 2027.
-          </p>
-          <span class="text-xs font-bold text-blue-600 hover:text-red-600 cursor-pointer">EUROPA</span>
-        </div>
-      </a>
 
-      <!-- Notícia 2: Telescópio James Webb -->
-      <a href="#" class="news-card flex flex-col md:flex-row bg-white rounded-xl overflow-hidden shadow-sm">
-        <div class="img-wrapper w-full md:w-60 h-48">
-          <img
-            src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=300"
-            alt="Telescópio James Webb"
-          />
+    <!-- Font Awesome (ícones sociais) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- CSS separado por seção -->
+    <link rel="stylesheet" href="styles/body.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/section.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/footer.css">
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header id="site-header">
+    <!-- Ticker de últimas notícias -->
+    <div class="ticker-wrap">
+        <span class="ticker-label">AO VIVO</span>
+        <span class="ticker-track">
+            🔴 Câmara acelera votação do fim da escala 6x1 &nbsp;|&nbsp;
+            🌐 EUA adicionam 115 mil empregos em abril apesar da guerra com o Irã &nbsp;|&nbsp;
+            🏥 Ministério da Saúde: hantavírus em navio não representa risco ao Brasil &nbsp;|&nbsp;
+            📊 Pesquisa: Lula e Flávio Bolsonaro empatados para eleições 2026 &nbsp;|&nbsp;
+            🚀 James Webb descobre galáxia idêntica à Via Láctea &nbsp;|&nbsp;
+            ⚓ Navio dos EUA é alvo de mísseis ao tentar cruzar Estreito de Ormuz &nbsp;|&nbsp;
+            💰 Novo Desenrola é lançado com uso do FGTS e bloqueio de bets &nbsp;|&nbsp;
+            🤖 Robôs humanoides são instalados em cruzamentos de cidade chinesa &nbsp;|&nbsp;
+            🌍 América Latina disputa liderança da ONU com três candidatos &nbsp;|&nbsp;
+            📱 Câmara aprova renovação automática da CNH para motoristas sem multas &nbsp;|&nbsp;
+            🔴 Câmara acelera votação do fim da escala 6x1 &nbsp;|&nbsp;
+            🌐 EUA adicionam 115 mil empregos em abril apesar da guerra com o Irã &nbsp;|&nbsp;
+            🏥 Ministério da Saúde: hantavírus em navio não representa risco ao Brasil &nbsp;|&nbsp;
+            📊 Pesquisa: Lula e Flávio Bolsonaro empatados para eleições 2026
+        </span>
+    </div>
+
+    <div class="container header-content">
+        <h1 class="logo">INFO<span>MUNDO</span></h1>
+
+        <nav class="nav-links">
+            <a href="#nacional">Nacional</a>
+            <a href="#internacional">Internacional</a>
+            <a href="#economia">Economia</a>
+            <a href="#tecnologia">Tecnologia</a>
+            <a href="#esporte">Esporte</a>
+        </nav>
+
+        <div class="search">
+            <button title="Pesquisar">🔍</button>
+            <input class="styled" type="button" value="Buscar">
         </div>
-        <div class="p-6">
-          <h4 class="card-title text-xl font-bold mb-2 text-gray-900 cursor-pointer">
-            Telescópio James Webb descobre galáxia idêntica à Via Láctea
-          </h4>
-          <p class="text-gray-600 text-sm mb-4">
-            A descoberta desafia as teorias atuais sobre a formação do universo primitivo.
-          </p>
-          <span class="text-xs font-bold text-blue-600 hover:text-red-600 cursor-pointer">CIÊNCIA</span>
+    </div>
+</header>
+
+<!-- ===== BANNER URGENTE ===== -->
+<div class="breaking-banner">
+    Lula se reúne com Biden em Washington para discutir cooperação bilateral e crise no Oriente Médio
+</div>
+
+<!-- ===== DESTAQUE HERO ===== -->
+<section class="container" style="margin-top:28px;">
+    <div class="destaque">
+        <img
+            src="https://agenciacenarium.com.br/wp-content/uploads/2025/11/54907854708-b49baca9ce-k.jpg"
+            alt="Líderes mundiais se reúnem para acordo climático"
+        >
+        <div>
+            <span>MUNDO</span>
+            <h2>Crise climática: Líderes mundiais se reúnem para novo acordo histórico em Genebra</h2>
+            <p>A cúpula internacional busca reduzir em 40% a emissão de poluentes até 2030, com participação de 195 países.</p>
+            <a href="#">Ler matéria completa</a>
         </div>
-      </a>
-                </div>
-                <aside class="bg-white p-6 rounded-xl border border-gray-200">
-                    <h3 class="text-lg font-black mb-4 uppercase border-b pb-2">Mais Lidas</h3>
-                    <ol class="space-y-4">
-                        <li class="flex items-start space-x-3">
-                            <span class="text-2xl font-black text-gray-200 italic">01</span>
-                            <p class="font-bold text-sm hover:text-red-600 cursor-pointer">Alta do petróleo impacta transportes globais.</p>
-                        </li>
-                        <li class="flex items-start space-x-3">
-                            <span class="text-2xl font-black text-gray-200 italic">02</span>
-                            <p class="font-bold text-sm hover:text-red-600 cursor-pointer">Novas regras de visto para nômades digitais na Ásia.</p>
-                        </li>
-                        <li class="flex items-start space-x-3">
-                            <span class="text-2xl font-black text-gray-200 italic">03</span>
-                            <p class="font-bold text-sm hover:text-red-600 cursor-pointer">Olimpíadas: Comitê anuncia nova sede para 2036.</p>
-                        </li>
-                    </ol>
-                </aside>
+    </div>
+</section>
+
+<!-- ===== SEÇÃO BRASIL ===== -->
+<section id="nacional" class="container">
+    <h2 class="section-heading reveal reveal-delay-1">Brasil</h2>
+
+    <div class="cards-grid">
+
+        <!-- Card 1 -->
+        <div class="news-card reveal reveal-delay-1">
+            <div class="img-box">
+                <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=400" alt="Câmara dos Deputados">
+            </div>
+            <div class="card-body">
+                <h3>Câmara acelera tramitação para votar o fim da escala de trabalho 6x1 no Brasil</h3>
+                <p class="meta">Política • 2h atrás</p>
             </div>
         </div>
-    </section>
-    <footer>
-        <div class="container">
-            <h2 class=>INFO MUNDO</h2>
-            <p class=>Notícias verificadas em tempo real. O seu compromisso com a verdade em primeiro lugar.</p>
-            <div class="links">
-                <p>&copy; 2026 InfoMundo News. Todos os direitos reservados.</p>
-                <div class="flex space-x-6 mt-4 md:mt-0">
-                    <a href="#" class="hover:text-white">Privacidade</a>
-                    <a href="#" class="hover:text-white">Termos de Uso</a>
-                    <a href="#" class="hover:text-white">Contato</a>
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-reddit"></i>
-                    <i class="fa-brands fa-threads"></i>
-                    <i class="fa-brands fa-whatsapp"></i>
-                </div>
+
+        <!-- Card 2 -->
+        <div class="news-card reveal reveal-delay-2">
+            <div class="img-box">
+                <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=400" alt="Finanças">
+            </div>
+            <div class="card-body">
+                <h3>Novo Desenrola é lançado com descontos de até 90% e uso do FGTS para quitar dívidas</h3>
+                <p class="meta">Economia • 3h atrás</p>
             </div>
         </div>
-    </footer>
+
+        <!-- Card 3 -->
+        <div class="news-card reveal reveal-delay-3">
+            <div class="img-box">
+                <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=400" alt="Justiça">
+            </div>
+            <div class="card-body">
+                <h3>Messias volta à AGU com agenda indefinida enquanto aguarda decisão de Lula sobre seu futuro</h3>
+                <p class="meta">Política • 4h atrás</p>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="news-card reveal reveal-delay-4">
+            <div class="img-box">
+                <img src="https://images.unsplash.com/photo-1487744480471-9ca1bca6fb7d?auto=format&fit=crop&w=400" alt="Trânsito">
+            </div>
+            <div class="card-body">
+                <h3>Câmara aprova renovação automática da CNH para motoristas sem infrações</h3>
+                <p class="meta">Geral • 5h atrás</p>
+            </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="news-card reveal reveal-delay-1">
+            <div class="img-box">
+                <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=400" alt="Saúde">
+            </div>
+            <div class="card-body">
+                <h3>Ministério da Saúde: surto de hantavírus em navio não representa risco para o Brasil</h3>
+                <p class="meta">Saúde • 2h atrás</p>
+            </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="news-card reveal reveal-delay-2">
+            <div class="img-box">
+                <img src="https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?auto=format&fit=crop&w=400" alt="Eleições">
+            </div>
+            <div class="card-body">
+                <h3>Pesquisa: Lula e Flávio Bolsonaro estão empatados no primeiro turno das eleições 2026</h3>
+                <p class="meta">Política • 1h atrás</p>
+            </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="news-card reveal reveal-delay-3">
+            <div class="img-box">
+                <img src="https://images.unsplash.com/photo-1509390144018-eedb5d1b2dc2?auto=format&fit=crop&w=400" alt="Educação">
+            </div>
+            <div class="card-body">
+                <h3>FIES 2026: pré-selecionados têm até segunda-feira para validar informações no portal</h3>
+                <p class="meta">Educação • 7h atrás</p>
+            </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="news-card reveal reveal-delay-4">
+            <div class="img-box">
+                <img src="https://images.unsplash.com/photo-1508247967583-7d982ea01526?auto=format&fit=crop&w=400" alt="Fábrica">
+            </div>
+            <div class="card-body">
+                <h3>Fábrica de produção de linha chilena é fechada pela fiscalização no Rio de Janeiro</h3>
+                <p class="meta">Segurança • 8h atrás</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<hr class="section-divider container">
+
+<!-- ===== SEÇÃO INTERNACIONAL ===== -->
+<section id="internacional">
+    <div class="container">
+        <h2 class="section-heading blue reveal reveal-delay-1">Internacional</h2>
+
+        <div class="int-grid">
+
+            <!-- Coluna esquerda (notícias principais) -->
+            <div class="int-left">
+
+                <a href="#" class="news-card-h reveal reveal-delay-1">
+                    <div class="img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1474546652694-a33dd8161d66?auto=format&fit=crop&w=400" alt="Oriente Médio">
+                    </div>
+                    <div class="card-info">
+                        <h4 class="card-title">Navio dos EUA é atingido por mísseis ao tentar cruzar o Estreito de Ormuz</h4>
+                        <p class="card-desc">Mídia iraniana confirmou o ataque. Forças norte-americanas negaram a versão. Tensão eleva preço do petróleo no mercado global.</p>
+                        <span class="badge-cat usa">ORIENTE MÉDIO</span>
+                    </div>
+                </a>
+
+                <a href="#" class="news-card-h reveal reveal-delay-2">
+                    <div class="img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=400" alt="Telescópio James Webb">
+                    </div>
+                    <div class="card-info">
+                        <h4 class="card-title">Telescópio James Webb descobre galáxia idêntica à Via Láctea no universo primitivo</h4>
+                        <p class="card-desc">A descoberta desafia as teorias sobre a formação galáctica e abre novas perspectivas para a cosmologia moderna.</p>
+                        <span class="badge-cat ciencia">CIÊNCIA</span>
+                    </div>
+                </a>
+
+                <a href="#" class="news-card-h reveal reveal-delay-2">
+                    <div class="img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=400" alt="Moeda digital">
+                    </div>
+                    <div class="card-info">
+                        <h4 class="card-title">Moeda digital europeia entra em fase final de testes; lançamento previsto para 2027</h4>
+                        <p class="card-desc">O Banco Central Europeu confirmou que a infraestrutura está pronta e o euro digital poderá circular em todos os países-membros.</p>
+                        <span class="badge-cat europa">EUROPA</span>
+                    </div>
+                </a>
+
+                <a href="#" class="news-card-h reveal reveal-delay-3">
+                    <div class="img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=400" alt="Robô humanoide">
+                    </div>
+                    <div class="card-info">
+                        <h4 class="card-title">China instala robôs humanoides em cruzamentos de Hangzhou para auxiliar policiais de trânsito</h4>
+                        <p class="card-desc">Os androides orientam pedestres e monitoram infrações em tempo real, numa iniciativa inédita de policiamento automatizado.</p>
+                        <span class="badge-cat asia">ÁSIA</span>
+                    </div>
+                </a>
+
+            </div>
+
+            <!-- Sidebar mais lidas -->
+            <aside class="sidebar reveal reveal-delay-2">
+                <h3>Mais Lidas</h3>
+                <ol>
+                    <li>
+                        <span class="num">01</span>
+                        <p>Alta do petróleo impacta preços do transporte em todo o mundo após tensão em Ormuz.</p>
+                    </li>
+                    <li>
+                        <span class="num">02</span>
+                        <p>EUA adicionam 115 mil empregos em abril mesmo sob pressão da guerra com o Irã.</p>
+                    </li>
+                    <li>
+                        <span class="num">03</span>
+                        <p>Olimpíadas 2036: Comitê Olímpico Internacional anuncia nova cidade-sede.</p>
+                    </li>
+                    <li>
+                        <span class="num">04</span>
+                        <p>Rússia atinge preços recordes de exportação de petróleo desde o início da Guerra Fria.</p>
+                    </li>
+                    <li>
+                        <span class="num">05</span>
+                        <p>América Latina disputa liderança da ONU com três candidatos; pressão por primeira mulher.</p>
+                    </li>
+                    <li>
+                        <span class="num">06</span>
+                        <p>Ciberataque derruba plataforma Canvas usada por milhares de escolas nos EUA.</p>
+                    </li>
+                    <li>
+                        <span class="num">07</span>
+                        <p>Irã anuncia nova autoridade jurídica para passagem pelo Estreito do Golfo Pérsico.</p>
+                    </li>
+                </ol>
+            </aside>
+
+        </div>
+    </div>
+</section>
+
+<hr class="section-divider container">
+
+<!-- ===== SEÇÃO ECONOMIA ===== -->
+<section id="economia" class="container">
+    <h2 class="section-heading reveal reveal-delay-1">Economia</h2>
+
+    <div class="eco-grid">
+
+        <div class="news-card reveal reveal-delay-1">
+            <div class="img-box">
+                <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=400" alt="Bolsa de valores">
+            </div>
+            <div class="card-body">
+                <h3>Ibovespa fecha em alta após dados positivos de emprego nos EUA e queda da inflação</h3>
+                <p class="meta">Mercados • 1h atrás</p>
+            </div>
+        </div>
+
+        <div class="news-card reveal reveal-delay-2">
+            <div class="img-box">
+                <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=400" alt="Dívida">
+            </div>
+            <div class="card-body">
+                <h3>82,2 milhões de brasileiros estão inadimplentes — quase metade da população adulta do país</h3>
+                <p class="meta">Economia • 5h atrás</p>
+            </div>
+        </div>
+
+        <div class="news-card reveal reveal-delay-3">
+            <div class="img-box">
+                <img src="https://images.unsplash.com/photo-1502920514313-52581002a659?auto=format&fit=crop&w=400" alt="Energia">
+            </div>
+            <div class="card-body">
+                <h3>Brasil tem capacidade de liderar transição energética na América Latina, aponta relatório do BRICS</h3>
+                <p class="meta">Energia • 6h atrás</p>
+            </div>
+        </div>
+
+        <div class="news-card reveal reveal-delay-1">
+            <div class="img-box">
+                <img src="https://images.unsplash.com/photo-1464938050520-ef2270bb8ce8?auto=format&fit=crop&w=400" alt="Petróleo">
+            </div>
+            <div class="card-body">
+                <h3>Alta do petróleo após conflito em Ormuz pressiona custos de transporte e alimentos no mundo</h3>
+                <p class="meta">Commodities • 3h atrás</p>
+            </div>
+        </div>
+
+        <div class="news-card reveal reveal-delay-2">
+            <div class="img-box">
+                <img src="https://images.unsplash.com/photo-1620321023374-d1a68fbc720d?auto=format&fit=crop&w=400" alt="Criptomoeda">
+            </div>
+            <div class="card-body">
+                <h3>Bitcoin supera US$ 95 mil após aprovação de ETF na Coreia do Sul impulsiona mercado cripto</h3>
+                <p class="meta">Cripto • 4h atrás</p>
+            </div>
+        </div>
+
+        <div class="news-card reveal reveal-delay-3">
+            <div class="img-box">
+                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=400" alt="Imóveis">
+            </div>
+            <div class="card-body">
+                <h3>Setor imobiliário registra alta histórica em São Paulo, Rio e Brasília no primeiro trimestre</h3>
+                <p class="meta">Negócios • 7h atrás</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<hr class="section-divider container">
+
+<!-- ===== SEÇÃO TECNOLOGIA ===== -->
+<section id="tecnologia" class="container">
+    <h2 class="section-heading reveal reveal-delay-1">Tecnologia</h2>
+
+    <div class="tec-grid">
+
+        <div class="news-card reveal reveal-delay-1">
+            <div class="img-box">
+                <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?auto=format&fit=crop&w=400" alt="Inteligência Artificial">
+            </div>
+            <div class="card-body">
+                <h3>Anthropic lança Claude com capacidade de controlar computadores de forma autônoma</h3>
+                <p class="meta">IA • 3h atrás</p>
+            </div>
+        </div>
+
+        <div class="news-card reveal reveal-delay-2">
+            <div class="img-box">
+                <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=400" alt="Computador">
+            </div>
+            <div class="card-body">
+                <h3>China apresenta primeiro caminhão de mineração totalmente autônomo e sem motorista do mundo</h3>
+                <p class="meta">Inovação • 2h atrás</p>
+            </div>
+        </div>
+
+        <div class="news-card reveal reveal-delay-3">
+            <div class="img-box">
+                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=400" alt="Segurança digital">
+            </div>
+            <div class="card-body">
+                <h3>Ciberataque ShinyHunters derruba plataforma Canvas com dados de 15 milhões de estudantes</h3>
+                <p class="meta">Cibersegurança • 8h atrás</p>
+            </div>
+        </div>
+
+        <div class="news-card reveal reveal-delay-4">
+            <div class="img-box">
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=400" alt="Chip">
+            </div>
+            <div class="card-body">
+                <h3>TSMC anuncia novo chip de 1,4 nanômetros; produção em massa prevista para 2027</h3>
+                <p class="meta">Hardware • 6h atrás</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ===== SEÇÃO ESPORTE ===== -->
+<section id="esporte">
+    <div class="container">
+        <h2 class="section-heading reveal reveal-delay-1">Esporte</h2>
+
+        <div class="esp-grid">
+
+            <div class="news-card reveal reveal-delay-1">
+                <div class="img-box">
+                    <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=400" alt="Futebol">
+                </div>
+                <div class="card-body">
+                    <h3>Brasil goleia Colômbia por 4 a 1 nas Eliminatórias e assume a liderança da tabela sul-americana</h3>
+                    <p class="meta">Futebol • 1h atrás</p>
+                </div>
+            </div>
+
+            <div class="news-card reveal reveal-delay-2">
+                <div class="img-box">
+                    <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?auto=format&fit=crop&w=400" alt="Olimpíadas">
+                </div>
+                <div class="card-body">
+                    <h3>Comitê Olímpico confirma Nova Délhi como sede dos Jogos Olímpicos de 2036</h3>
+                    <p class="meta">Olimpíadas • 4h atrás</p>
+                </div>
+            </div>
+
+            <div class="news-card reveal reveal-delay-3">
+                <div class="img-box">
+                    <img src="https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?auto=format&fit=crop&w=400" alt="Tênis">
+                </div>
+                <div class="card-body">
+                    <h3>Alcaraz vence Djokovic em Madri e consolida liderança no ranking mundial de tênis</h3>
+                    <p class="meta">Tênis • 6h atrás</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+    <div class="container">
+        <h2>INFO MUNDO</h2>
+        <p>Notícias verificadas em tempo real. O seu compromisso com a verdade em primeiro lugar.</p>
+
+        <div class="footer-socials">
+            <i class="fa-brands fa-instagram" title="Instagram"></i>
+            <i class="fa-brands fa-facebook" title="Facebook"></i>
+            <i class="fa-brands fa-reddit" title="Reddit"></i>
+            <i class="fa-brands fa-threads" title="Threads"></i>
+            <i class="fa-brands fa-whatsapp" title="WhatsApp"></i>
+        </div>
+
+        <div class="footer-links">
+            <p>&copy; 2026 InfoMundo News. Todos os direitos reservados.</p>
+            <a href="#">Privacidade</a>
+            <a href="#">Termos de Uso</a>
+            <a href="#">Contato</a>
+            <a href="#">Redação</a>
+            <a href="#">Anuncie</a>
+        </div>
+    </div>
+</footer>
+
+<!-- Botão voltar ao topo -->
+<button id="back-to-top" title="Voltar ao topo">↑</button>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script 
+/* =============================================
+   MAIN.JS — Interatividade do InfoMundo
+   ============================================= */
+
+document.addEventListener 'DOMContentLoaded', () => {
+
+    /* ===== 1. SCROLL REVEAL ===== */
+    const revealEls = document.querySelectorAll('.reveal');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // dispara só uma vez
+            }
+        });
+    }, {
+        threshold: 0.12,
+        rootMargin: '0px 0px -40px 0px'
+    });
+
+    revealEls.forEach(el => observer.observe(el));
+
+
+    /* ===== 2. HEADER — sombra ao rolar ===== */
+    const header = document.getElementById('site-header');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 10) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    }, { passive: true });
+
+
+    /* ===== 3. BOTÃO VOLTAR AO TOPO ===== */
+    const backBtn = document.getElementById('back-to-top');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 400) {
+            backBtn.classList.add('show');
+        } else {
+            backBtn.classList.remove('show');
+        }
+    }, { passive: true });
+
+    backBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+
+    /* ===== 4. HOVER TILT nos cards ===== */
+    const cards = document.querySelectorAll('.news-card, a.news-card-h');
+
+    cards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const cx = rect.width  / 2;
+            const cy = rect.height / 2;
+            const rotX = ((y - cy) / cy) * 3;   // max 3°
+            const rotY = ((x - cx) / cx) * -3;
+            card.style.transform = `perspective(800px) rotateX(${rotX}deg) rotateY(${rotY}deg) translateY(-4px) scale(1.02)`;
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = '';
+        });
+    });
+
+
+    /* ===== 5. NAV ACTIVE ao rolar ===== */
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('nav.nav-links a');
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.getAttribute('id');
+                navLinks.forEach(link => {
+                    link.style.color = link.getAttribute('href') === `#${id}`
+                        ? 'var(--red)'
+                        : '';
+                });
+            }
+        });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+
+    sections.forEach(s => sectionObserver.observe(s));
+
+
+    /* ===== 6. CLICK no logo — volta ao topo ===== */
+    document.querySelector('.logo')?.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+
+    /* ===== 7. TICKER pausar no hover ===== */
+    const ticker = document.querySelector('.ticker-track');
+    if (ticker) {
+        ticker.addEventListener('mouseenter', () => {
+            ticker.style.animationPlayState = 'paused';
+        });
+        ticker.addEventListener('mouseleave', () => {
+            ticker.style.animationPlayState = 'running';
+        });
+    }
+
+};
+src="scripts/main.js"</script>
 
 </body>
 </html>
