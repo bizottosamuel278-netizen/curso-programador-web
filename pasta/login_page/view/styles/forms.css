@@ -1,0 +1,80 @@
+.form-container h2 {
+    color: #04f745; /* Título Laranja */
+    font-size: 24px;
+    margin-bottom: 6px;
+    text-align: center;
+}
+
+.form-container .subtitle {
+    color: #a0a0a0;
+    font-size: 14px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    color: #ffffff;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    background-color: #2a2a2a;
+    border: 1px solid #444444;
+    border-radius: 6px;
+    font-size: 15px;
+    color: #ffffff;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Animação de Foco com Brilho Laranja */
+.input-group input:focus {
+    border-color: #33ff00;
+    box-shadow: 0 0 8px rgba(0, 255, 17, 0.6);
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    background-color: #00f84a; /* Botão Laranja */
+    color: #121212; /* Texto Preto */
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-submit:hover {
+    background-color: #08f20c;
+}
+
+.btn-submit:active {
+    transform: scale(0.98); /* Efeito de clique do botão */
+}
+
+.switch-form {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #a0a0a0;
+}
+
+.switch-form a {
+    color: #0ae532;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.switch-form a:hover {
+    text-decoration: underline;
+}

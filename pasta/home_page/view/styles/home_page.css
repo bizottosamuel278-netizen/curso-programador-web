@@ -1,0 +1,332 @@
+ :root {
+      --neon: #39ff14;
+      --neon-dim: #1aff0088;
+      --neon-glow: 0 0 8px #39ff14, 0 0 20px #39ff1455;
+      --dark: #0d0d0d;
+      --card: #161616;
+      --border: #39ff1440;
+      --text: #e8e8e8;
+      --muted: #888;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--dark);
+      font-family: 'Rajdhani', sans-serif;
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0,0,0,0.07) 2px,
+        rgba(0,0,0,0.07) 4px
+      );
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(13,13,13,0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+      animation: slideDown 0.6s cubic-bezier(0.16,1,0.3,1) both;
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--neon), transparent);
+      animation: scanGlow 3s ease-in-out infinite;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-100%); opacity: 0; }
+      to   { transform: translateY(0);    opacity: 1; }
+    }
+
+    @keyframes scanGlow {
+      0%, 100% { opacity: 0.3; }
+      50%       { opacity: 1;   }
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      animation: fadeIn 0.8s 0.3s both;
+    }
+
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      border: 1.5px solid var(--neon);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      box-shadow: var(--neon-glow);
+      overflow: hidden;
+    }
+
+    .logo-icon::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, #39ff1420, transparent 60%);
+    }
+
+    .logo-icon svg {
+      width: 20px;
+      height: 20px;
+      fill: var(--neon);
+      filter: drop-shadow(0 0 4px var(--neon));
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+
+    .logo-brand {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 26px;
+      letter-spacing: 4px;
+      color: var(--neon);
+      text-shadow: var(--neon-glow);
+      animation: flicker 8s ease-in-out infinite;
+    }
+
+    .logo-tagline {
+      font-family: 'Space Mono', monospace;
+      font-size: 8px;
+      letter-spacing: 3px;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    @keyframes flicker {
+      0%,96%,100% { opacity: 1; }
+      97%          { opacity: 0.4; }
+      98%          { opacity: 1; }
+      99%          { opacity: 0.6; }
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    nav a {
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 4px;
+      position: relative;
+      transition: color 0.2s;
+      animation: fadeIn 0.6s both;
+    }
+
+    nav a:nth-child(1) { animation-delay: 0.4s; }
+    nav a:nth-child(2) { animation-delay: 0.5s; }
+    nav a:nth-child(3) { animation-delay: 0.6s; }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 2px;
+      left: 14px; right: 14px;
+      height: 1px;
+      background: var(--neon);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.25s ease;
+    }
+
+    nav a:hover {
+      color: var(--neon);
+      text-shadow: 0 0 8px var(--neon);
+    }
+
+    nav a:hover::after {
+      transform: scaleX(1);
+    }
+
+    nav a.active {
+      color: var(--neon);
+    }
+
+    nav a.active::after {
+      transform: scaleX(1);
+    }
+
+    .actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      animation: fadeIn 0.8s 0.7s both;
+    }
+
+    .cart-btn {
+      position: relative;
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 7px 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text);
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: border-color 0.2s, color 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+    }
+
+    .cart-btn:hover {
+      border-color: var(--neon);
+      color: var(--neon);
+      box-shadow: var(--neon-glow);
+    }
+
+    .cart-btn svg {
+      width: 16px; height: 16px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.8;
+    }
+
+    .cart-badge {
+      position: absolute;
+      top: -6px; right: -6px;
+      width: 16px; height: 16px;
+      background: var(--neon);
+      color: #000;
+      font-family: 'Space Mono', monospace;
+      font-size: 9px;
+      font-weight: 700;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 6px var(--neon);
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%,100% { box-shadow: 0 0 4px var(--neon); }
+      50%      { box-shadow: 0 0 12px var(--neon), 0 0 20px var(--neon); }
+    }
+
+    .user-pill {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 5px 12px 5px 6px;
+      border: 1px solid var(--border);
+      border-radius: 40px;
+      cursor: pointer;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+    }
+
+    .user-pill:hover {
+      border-color: var(--neon);
+      box-shadow: var(--neon-glow);
+    }
+
+    .user-avatar {
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #39ff14, #00cc00);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Bebas Neue', cursive;
+      font-size: 13px;
+      color: #000;
+      letter-spacing: 0;
+      flex-shrink: 0;
+    }
+
+    .user-name {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--text);
+    }
+
+    .divider {
+      width: 1px;
+      height: 24px;
+      background: var(--border);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-6px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .demo-body {
+      padding: 80px 40px 40px;
+      text-align: center;
+    }
+
+    .demo-body h2 {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 80px;
+      letter-spacing: 8px;
+      color: var(--neon);
+      text-shadow: var(--neon-glow);
+      line-height: 1;
+      animation: fadeIn 0.8s 0.8s both;
+    }
+
+    .demo-body p {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--muted);
+      margin-top: 12px;
+      animation: fadeIn 0.8s 1s both;
+    }
+
+    @media (max-width: 680px) {
+      header { padding: 0 20px; }
+      .logo-tagline, .user-name, .divider { display: none; }
+      nav a { font-size: 11px; padding: 6px 10px; }
+      .demo-body h2 { font-size: 48px; }
+    }

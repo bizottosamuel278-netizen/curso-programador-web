@@ -1,0 +1,26 @@
+#nav-banner {
+      display: flex;
+}
+
+#btn-banner-esquerdo, #btn-banner-direito {
+      width: 6vw;
+      height: 49vh;
+      background-color: green;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+#banner {
+      width: 80vw;
+      height: 40vh;
+      background-color: green;
+
+      overflow-x: hidden;
+}
+
+#banner div {
+      width: 80vw;
+      height: 40vh;
+      flex-shrink: 0;
+}
