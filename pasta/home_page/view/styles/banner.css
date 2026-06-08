@@ -1,0 +1,106 @@
+#nav-banner {
+  display: flex;
+  align-items: center;
+}
+
+#btn-banner-esquerdo, #btn-banner-direito {
+    width: 6vw;
+    height: 50vh;
+    background-color: green;
+    border: 2px solid var(--neon);
+    border-top: 2px solid var(--neon);
+    border-bottom: 2px solid var(--neon);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 7rem auto;
+    max-width: 1100px;
+    border-radius: 10px
+}
+
+#btn-banner-esquerdo i, #btn-banner-direito i {
+    color: var(--neon);
+    font-size: 86px;
+    color:black;
+}
+
+#banner {
+    width: 70vw;
+    height: 40vh;
+    background-color: green;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-width: 1100px; 
+    margin: 7rem auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(57, 255, 20, 0.5);
+    border: 2px solid var(--neon);
+    border-top: 2px solid var(--neon);
+    border-bottom: 2px solid var(--neon);
+}
+
+
+#navegacao-banner {
+    position: absolute;
+    display: flex;
+    left: -70vw;
+    transition: left 0.5s ease;
+}
+
+#navegacao-banner div {
+    width: 70vw;
+    height: 40vh;
+    flex-shrink: 0;
+}
+
+.verm {
+    background-color: red;
+}
+.verd {
+    background-color: green;
+}
+.azul {
+    background-color: blue;
+}
+.amar {
+    background-color: yellow;
+}
+.roxo {
+    background-color: purple;
+}
+
+.slide-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.slide-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
+  padding: 32px 20px 16px;
+}
+
+.slide-caption-text {
+  color: #39ff14; /* verde neon igual ao tema VRDX */
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
