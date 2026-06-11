@@ -1,0 +1,258 @@
+/* --- CONFIGURAÇÕES GERAIS --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: #0a0a0a;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .product-container {
+      background-color: #161616;
+      border: 2px solid #00e65a;
+      border-radius: 16px;
+      width: 100%;
+      max-width: 950px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      padding: 40px;
+      box-shadow: 0 20px 40px rgba(0, 230, 90, 0.05);
+    }
+
+    .gallery-section {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .main-image-box {
+      background-color: #1e1e1e;
+      border-radius: 12px;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      border: 1px solid #333;
+      position: relative;
+    }
+
+    .main-image-box img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+    }
+
+    .view-badge {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: 1px solid #00e65a;
+      color: #00e65a;
+    }
+
+    .thumbnail-selector {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    .thumb-btn {
+      background-color: #1e1e1e;
+      border: 1px solid #333;
+      color: #aaa;
+      padding: 12px 8px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      transition: all 0.2s ease;
+    }
+
+    .thumb-btn:hover {
+      border-color: #666;
+      color: #fff;
+    }
+
+    .thumb-btn.active {
+      border-color: #00e65a;
+      background-color: rgba(0, 230, 90, 0.1);
+      color: #00e65a;
+    }
+
+    .info-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .product-header h1 {
+      font-size: 2rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    .price-box {
+      margin: 15px 0;
+    }
+
+    .old-price {
+      font-size: 0.9rem;
+      color: #777;
+      text-decoration: line-through;
+    }
+
+    .current-price {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .product-description {
+      color: #aaa;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      font-size: 0.85rem;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    .size-selector {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 25px;
+    }
+
+    .size-btn {
+      background-color: #222;
+      border: 1px solid #444;
+      color: #fff;
+      width: 45px;
+      height: 45px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.2s ease;
+    }
+
+    .size-btn:hover {
+      border-color: #888;
+    }
+
+    .size-btn.selected {
+      background-color: #fff;
+      color: #000;
+      border-color: #fff;
+    }
+
+    /* Seção de Cupons */
+    .coupon-section {
+      margin-bottom: 30px;
+    }
+
+    .coupon-container {
+      display: flex;
+      gap: 10px;
+    }
+
+    .coupon-input {
+      background-color: #222;
+      border: 1px solid #444;
+      color: #fff;
+      padding: 12px;
+      border-radius: 8px;
+      flex-grow: 1;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+    }
+
+    .coupon-input:focus {
+      outline: none;
+      border-color: #00e65a;
+    }
+
+    .coupon-apply-btn {
+      background-color: #333;
+      border: none;
+      color: #fff;
+      padding: 0 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.2s;
+    }
+
+    .coupon-apply-btn:hover {
+      background-color: #444;
+    }
+
+    .coupon-message {
+      font-size: 0.85rem;
+      margin-top: 5px;
+      display: none;
+    }
+
+    /* Botão de Compra Principal */
+    .buy-button {
+      background: linear-gradient(135deg, #00ff66 0%, #00b344 100%);
+      color: #000;
+      border: none;
+      padding: 18px;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 4px 15px rgba(0, 230, 90, 0.3);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .buy-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 230, 90, 0.5);
+    }
+
+    .buy-button:active {
+      transform: translateY(0);
+    }
+
+    /* --- RESPONSIVIDADE (MOBILE) --- */
+    @media (max-width: 768px) {
+      .product-container {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 25px;
+      }
+      .main-image-box {
+        height: 300px;
+      }
+    }

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Página de Compra - Moletom Nike Athletics</title>
+        <link rel="stylesheet" href="styles/compras_page.css">
+        <script type="'module" src="./../controller/compras.js" defer></script>
+    </head>
+    <body>
+        <div class="product-container">
+            <div class="gallery-section">
+                <div class="main-image-box">
+                    <span class="view-badge" id="view-label">Frente</span>
+                    <img id="main-product-image" src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=500&auto=format&fit=crop&q=60" alt="Moletom Nike">
+                </div>
+                <div class="thumbnail-selector">
+                    <button class="thumb-btn active" onclick="changeView('frente', 'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=500&auto=format&fit=crop&q=60', this)">Frente</button>
+                    <button class="thumb-btn" onclick="changeView('costas', 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=500&auto=format&fit=crop&q=60', this)">Costas</button>
+                    <button class="thumb-btn" onclick="changeView('esquerda', 'https://images.unsplash.com/photo-1556905141-8693094848d4?w=500&auto=format&fit=crop&q=60', this)">Lado Esq.</button>
+                    <button class="thumb-btn" onclick="changeView('direita', 'https://images.unsplash.com/photo-1556905200-279565513a2d?w=500&auto=format&fit=crop&q=60', this)">Lado Dir.</button>
+                </div>
+            </div>
+            <div class="info-section">
+                <div class="product-header">
+                    <h1>Moletom Nike Athletics</h1>
+                    <p style="color: #00e65a; font-size: 0.9rem; font-weight: 600;">Coleção Retro 90s</p>
+                    <div class="price-box">
+                        <p class="old-price">R$ 249,90</p>
+                        <p class="current-price" id="display-price">R$ 159,90</p>
+                    </div>
+                    <p class="product-description">
+                        O Moletom Nike Athletics traz o conforto do tecido fleece premium combinado com uma estampa icônica inspirada no visual vibrante dos anos 90. Possui capuz ajustável, bolso canguru e acabamento canelado que garante o ajuste perfeito para o seu dia a dia.
+                    </p>
+                </div>
+                <div>
+                    <p class="section-title">Selecione o Tamanho</p>
+                    <div class="size-selector">
+                        <button class="size-btn" onclick="selectSize(this)">P</button>
+                        <button class="size-btn" onclick="selectSize(this)">M</button>
+                        <button class="size-btn" onclick="selectSize(this)">G</button>
+                        <button class="size-btn" onclick="selectSize(this)">GG</button>
+                    </div>
+                </div>
+                <div class="coupon-section">
+                    <p class="section-title">Possui Cupom de Desconto?</p>
+                    <div class="coupon-container">
+                        <input
+                            type="text"
+                            class="coupon-input"
+                            id="coupon-field"
+                            placeholder="Digite seu cupom"
+                        >
+                        <button class="coupon-apply-btn" onclick="applyCoupon()">Aplicar</button>
+                    </div>
+                    <p class="coupon-message" id="coupon-msg"></p>
+                </div>
+                <button class="buy-button" onclick="checkout()">
+                    <svg
+                        width="20"
+                        height="20"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                    Comprar Agora
+                </button>
+            </div>
+        </div>
+    </body>
+</html>
